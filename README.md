@@ -4,74 +4,65 @@
 
 This Java program is a Swing-based GUI application developed as a project for the University of Luxembourg. The application follows the Model-View-Controller (MVC) design pattern and includes multiple models, views, and controllers.
 
-[![Watch the demo](screenshot.png)](https://youtu.be/ePQbzIJmA2A)
+![GIF](animation.gif)
 
-## Main Components
+## Project Structure
 
-### Main Class
+The project is organized into several packages:
 
-The `Main` class extends `JFrame` and serves as the entry point for the application. It initializes the main window and sets up the various models, views, and controllers.
+- `Controllers`: Contains the controller classes for each view.
+- `Models`: Contains the model classes representing the data and business logic.
+- `Views`: Contains the view classes for the GUI components.
+- `Views.View1`, `Views.View2`, `Views.View3`, `Views.View4`, `Views.View5`: Contain specific view implementations for different parts of the application.
 
-```java
-import Controllers.*;
-import Views.InputPanel;
-import Views.OutputPanel;
-import Models.Model1;
-import Models.Model2;
-import Models.Model3;
-import Models.Model4;
-import Models.Model5;
-import Views.View1.View1In;
-import Views.View2.View2In;
-import Views.View3.View3In;
-import Views.View4.View4In;
-import Views.View5.View5In;
+### Main Components
 
-import javax.swing.*;
-import java.awt.*;
+#### Main Class
 
-public class Main extends JFrame {
+The `Main` class extends `JFrame` and serves as the entry point for the application. It initializes the main window and sets up the various models, views, and controllers. The main window is titled "University of Luxembourg - 2021/2022 - GUI Project - D. Deberdt" and uses a `BorderLayout` to organize the components.
 
-    public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> {
-            var frame = new Main();
-            frame.setVisible(true);
-        });
-    }
+#### Models
 
-    public Main() {
-        super("University of Luxembourg - 2021/2022 - GUI Project - D. Deberdt");
+The application includes five models, each representing different data and business logic:
 
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+- `Model1`: Represents a message from interstellar space.
+- `Model2`: Represents a flag design.
+- `Model3`: Represents a thermostat.
+- `Model4`: Represents an infinite walk.
+- `Model5`: Represents bubbles and snow.
 
-        var m1 = new Model1("A Message From Interstellar Space");
-        var v1 = new View1In(m1);
-        var c1 = new Controller1(v1, m1);
+#### Views
 
-        var m2 = new Model2("Flag Design");
-        var v2 = new View2In(m2);
-        var c2 = new Controller2(v2, m2);
+The views are responsible for displaying the data to the user. Each model has a corresponding view:
 
-        var m3 = new Model3("Thermostat");
-        var v3 = new View3In(m3);
-        var c3 = new Controller3(v3, m3);
+- `View1In`: Displays the data from `Model1`.
+- `View2In`: Displays the data from `Model2`.
+- `View3In`: Displays the data from `Model3`.
+- `View4In`: Displays the data from `Model4`.
+- `View5In`: Displays the data from `Model5`.
 
-        var m4 = new Model4("Infinite Walk");
-        var v4 = new View4In(m4);
-        var c4 = new Controller4(v4, m4);
+Additionally, there are input and output panels:
 
-        var m5 = new Model5("Bubbles and Snow");
-        var v5 = new View5In(m5);
-        var c5 = new Controller5(v5, m5);
+- `InputPanel`: Allows user interaction with the views.
+- `OutputPanel`: Displays the output from the models.
 
-        setLayout(new BorderLayout());
+#### Controllers
 
-        var inputPanel = new InputPanel(v1, v2, v3, v4, v5);
-        var outputPanel = new OutputPanel(m1, m2, m3, m4, m5);
+The controllers handle the interaction between the models and views. Each model-view pair has a corresponding controller:
 
-        add(outputPanel, BorderLayout.CENTER);
-        add(inputPanel, BorderLayout.SOUTH);
+- `Controller1`: Manages the interaction between `Model1` and `View1In`.
+- `Controller2`: Manages the interaction between `Model2` and `View2In`.
+- `Controller3`: Manages the interaction between `Model3` and `View3In`.
+- `Controller4`: Manages the interaction between `Model4` and `View4In`.
+- `Controller5`: Manages the interaction between `Model5` and `View5In`.
 
-        pack();
-    }
-}
+### IronManSprite Class
+
+The `IronManSprite` class is responsible for loading and rendering the Iron Man sprite image. It uses the `ImageIO` class to read the image file and provides methods to update the sprite's position and paint it on the screen. The image file `ironman.png` is located in the `Views/View4` directory.
+
+## Features
+
+- **MVC Design Pattern**: The application follows the MVC design pattern, separating the data (models), user interface (views), and control logic (controllers).
+- **Swing GUI**: The application uses Java Swing to create a graphical user interface.
+- **Multiple Models and Views**: The application includes five different models and corresponding views, each representing different data and functionality.
+- **Interactive Panels**: The input and output panels allow user interaction and display the results.
