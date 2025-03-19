@@ -4,6 +4,13 @@
 
 This Java program is a Swing-based GUI application developed as a project for the University of Luxembourg. The application follows the Model-View-Controller (MVC) design pattern and includes multiple models, views, and controllers.
 
+## Features
+
+- **MVC Design Pattern**: The application follows the MVC design pattern, separating the data (models), user interface (views), and control logic (controllers).
+- **Swing GUI**: The application uses Java Swing to create a graphical user interface.
+- **Multiple Models and Views**: The application includes five different models and corresponding views, each representing different data and functionality.
+- **Interactive Panels**: The input and output panels allow user interaction and display the results.
+
 ![GIF](animation.gif)
 
 ## Project Structure
@@ -43,14 +50,3 @@ Additionally, there are input and output panels:
 #### Controllers
 
 The controllers handle the interaction between the models and views. Each model-view pair has a corresponding controller:
-
-### IronManSprite Class
-
-The `IronManSprite` class is responsible for loading and rendering the Iron Man sprite image. It uses the `ImageIO` class to read the image file and provides methods to update the sprite's position and paint it on the screen. The image file `ironman.png` is located in the `Views/View4` directory.
-
-## Features
-
-- **MVC Design Pattern**: The application follows the MVC design pattern, separating the data (models), user interface (views), and control logic (controllers).
-- **Swing GUI**: The application uses Java Swing to create a graphical user interface.
-- **Multiple Models and Views**: The application includes five different models and corresponding views, each representing different data and functionality.
-- **Interactive Panels**: The input and output panels allow user interaction and display the results.
