@@ -13,34 +13,28 @@ The project is organized into several packages:
 - `Controllers`: Contains the controller classes for each view.
 - `Models`: Contains the model classes representing the data and business logic.
 - `Views`: Contains the view classes for the GUI components.
-- `Views.View1`, `Views.View2`, `Views.View3`, `Views.View4`, `Views.View5`: Contain specific view implementations for different parts of the application.
 
 ### Main Components
 
 #### Main Class
 
-The `Main` class extends `JFrame` and serves as the entry point for the application. It initializes the main window and sets up the various models, views, and controllers. The main window is titled "University of Luxembourg - 2021/2022 - GUI Project - D. Deberdt" and uses a `BorderLayout` to organize the components.
+The `Main` class extends `JFrame` and serves as the entry point for the application. It initializes the main window and sets up the various models, views, and controllers. The main window uses a `BorderLayout` to organize the components.
 
 #### Models
 
 The application includes five models, each representing different data and business logic:
 
-- `Model1`: Represents a message from interstellar space.
-- `Model2`: Represents a flag design.
-- `Model3`: Represents a thermostat.
-- `Model4`: Represents an infinite walk.
-- `Model5`: Represents bubbles and snow.
+- `Model1`: Shows a message from interstellar space.
+- `Model2`: Shows a flag design.
+- `Model3`: Shows a thermostat.
+- `Model4`: Shows a warrior on an "infinite walk".
+- `Model5`: Shows a winter landscape with snow.
+
+Note that the stars in interstellar space and the snow falling in the last pane is basically the same animation reconfigured.
 
 #### Views
 
 The views are responsible for displaying the data to the user. Each model has a corresponding view:
-
-- `View1In`: Displays the data from `Model1`.
-- `View2In`: Displays the data from `Model2`.
-- `View3In`: Displays the data from `Model3`.
-- `View4In`: Displays the data from `Model4`.
-- `View5In`: Displays the data from `Model5`.
-
 Additionally, there are input and output panels:
 
 - `InputPanel`: Allows user interaction with the views.
@@ -49,12 +43,6 @@ Additionally, there are input and output panels:
 #### Controllers
 
 The controllers handle the interaction between the models and views. Each model-view pair has a corresponding controller:
-
-- `Controller1`: Manages the interaction between `Model1` and `View1In`.
-- `Controller2`: Manages the interaction between `Model2` and `View2In`.
-- `Controller3`: Manages the interaction between `Model3` and `View3In`.
-- `Controller4`: Manages the interaction between `Model4` and `View4In`.
-- `Controller5`: Manages the interaction between `Model5` and `View5In`.
 
 ### IronManSprite Class
 
